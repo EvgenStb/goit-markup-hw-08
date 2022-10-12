@@ -1,0 +1,54 @@
+.team {
+    margin: 0 auto;
+	padding-top: 94px;
+	padding-bottom: 94px;
+	font-size: 16px;
+	line-height: 1.19;
+	background-color: $bgc-grey;
+	text-align: center;
+
+    &__list {
+        @media screen and (min-width:768px){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+         // display: flex;
+        // justify-content: space-between;
+        // gap:30px;
+        
+    }
+    &__item {
+        margin-bottom:30px;
+        background-color: $bgc-white;
+	    width: 100%;
+	    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	    border-radius: 0px 0px 4px 4px;
+        @media screen and (min-width:768px){
+            width:calc((100% - 2 * 30px)/2);
+        }
+        @media screen and (min-width:1200px){
+            width:calc((100% - 3 *30px)/4);
+        }
+    }
+
+    &__image {
+        width: 100%;
+    }
+    &__emploee {
+        margin-top: 30px;
+	    margin-bottom: 10px;
+	    color: $titel-text;
+	    font-weight: 500;
+	    font-size: 16px;
+	    line-height: 1.19;
+
+    }
+    &__function {
+        margin-bottom: 16px;
+    }
+    &__social {
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,20 @@
+body {
+	margin: 0;
+	background-color:$bgc-white ;
+	color: $basic-text;
+	font-family: "Roboto", "Verdana", "Tahoma", sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.03em;
+	// padding: 15px;
+}
+
+
+.section-title {
+    color: $titel-text;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.17;
+	letter-spacing:0.03em;
+    text-align: center;
+	margin-bottom:50px;
+}

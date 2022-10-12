@@ -1,0 +1,81 @@
+<header class="header">
+    <a href="#" class="logo logo__header">logo</a>
+    <nav class="nav-site">
+        <ul class="nav-site__list">
+            <li class="nav-site__item"><a href="#" class="nav-site__link">Home</a></li>
+            <li class="nav-site__item"><a href="#" class="nav-site__link">About Us</a></li>
+            <li class="nav-site__item"><a href="#" class="nav-site__link">Services</a></li>
+            <li class="nav-site__item"><a href="#" class="nav-site__link">Blogs</a></li>
+        </ul>
+    </nav>
+    <button class="button button__header" type="button">Gift Finder</button>
+</header>
+
+
+
+// Buttons colors
+$text-orange:#F7941E;
+$text-white:#FFFFFF;
+$text-black:#000000;
+$bgc-white:#FFFFFF;
+$bgc-orange:#F7941E;
+$bgc-black:#000000;
+
+
+.header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:116px;
+    padding:27px;
+    margin:0 auto;
+}
+
+.logo {
+        color:inherit;
+        text-decoration: none;
+        font-family: 'Homemade Apple';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 39px;
+
+        &__header {
+            margin-left:80px;
+        }
+}
+
+.nav-site {
+        
+
+    &__list {
+        display: flex;
+        wrap:nowrap;
+        justify-content: center;
+        align-items: center;
+        gap:31px;
+    }
+
+    &__item {
+        list-style: none;
+    }
+
+    &__link {
+        color:inherit;
+        font-size: 18px;
+        line-height: 1.2;
+        text-decoration: none;  
+    }
+
+}
+
+.button__header {
+    color:$text-orange;
+    background-color: $bgc-white;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding:11px 25px;
+    margin-right:34px;
+    border:1px solid $bgc-orange;
+    border-radius:5px;
+}

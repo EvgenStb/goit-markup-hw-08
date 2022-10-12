@@ -1,0 +1,52 @@
+.nav {
+    display: none;
+    
+    @media screen and (min-width: 768px) {
+        display:block;
+    }
+}
+.site-nav {
+    display: flex;
+    &__item {
+        display: block;
+        
+        &:not(:last-child) {
+            margin-right:50px;
+        }
+        }
+      
+    &__link {
+    display: block;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	font-weight: 500;
+	line-height: 1.1;
+	letter-spacing: 0.02em;
+	color:$second-text;
+    transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:focus, &:hover {
+            color:$logo-text;
+        }
+        &--current {
+            position: relative;
+            color:$ico-blue;
+
+            &::after {
+                content:"";
+                position: absolute;
+	            bottom:-1px;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background-color:$ico-bgc-blue;
+                border-radius: 2px;
+            }
+        }    
+    }
+        
+    
+
+    }

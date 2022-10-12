@@ -1,0 +1,44 @@
+.about {
+    @media screen and (min-width:480px) and (max-width:1199px){
+        display:none;
+    }
+    &__list{
+        display:flex;
+        justify-content: space-between;
+        gap:30px;
+
+    }    
+    
+    &__item {
+        position: relative;
+	    text-align: center;
+              
+        &::before {
+            content:" ";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 70px;
+            background-color: rgba(47, 48, 58, 0.8);
+        }
+    }
+        
+    &__img{
+        width:370px;
+    }
+    &__desc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 70px;
+            position: absolute;
+            z-index: 3;
+            bottom: 0;
+            color:$title-white;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    
+}
