@@ -7,10 +7,13 @@
 	color:$logo-text;
 
 	&__header {
-		margin-right: 93px;
+		
 		@media screen and (min-width:480px){
 			margin-top:16px;
 			margin-bottom:16px;
+		}
+		@media screen and (min-width:1200px){
+			margin-right: 93px;
 		}
 	}
 	

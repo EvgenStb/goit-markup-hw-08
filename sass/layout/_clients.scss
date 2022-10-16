@@ -7,11 +7,11 @@
         }
         
     &__list {
-
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
+            width:100%;
         
         // @media screen and (min-width:480) and (max-width:1199px){
             
@@ -23,10 +23,13 @@
     &__item {
         display: flex;
         flex-wrap: wrap;
-	    width: calc((100% - 1 * 30px)/2);
+	    width: calc((100% - 30px)/2);
 	    height: 92px;
         @media screen and (min-width:768px){
-            
+            width:calc((100% - 2 * 30px)/3);
+        }
+        @media screen and (min-width:1200px){
+            width:calc((100% - 5 * 30px)/6);
         }
     }
 

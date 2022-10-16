@@ -1,0 +1,120 @@
+.menu-container {
+    position:fixed;
+    top:0;
+    left:0;
+    padding:48px 40px;
+    width:100vw;
+    height: 100vh;
+    background-color: $bgc-white;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 250ms linear;
+}
+.menu-container.is-open {
+    transform: translateX(0);
+ }
+.mob-menu {
+    &__button {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: transparent;
+        border:none;
+        margin:0;
+        padding:0;
+        border-radius: 50%;
+        outline:none;
+    }
+
+    &__ico{
+        width:40px;
+        height:40px;
+        border-radius: 50%;
+        outline:none;
+        cursor: pointer;
+        &:hover, &:focus {
+            fill:$btn-text-active;
+        }
+    }
+    
+    
+    &__ico--close{
+        position:absolute;
+        top:10px;
+        right: 15px;
+
+       
+    }
+    &__list {
+        display:flex;
+        flex-direction: column;
+        row-gap:32px;
+        margin-bottom:302px;
+        
+    }
+    &__link {
+    color:$second-text;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+        color:$logo-text;
+    }
+    }
+    &__contact {
+        font-size:34px;
+        display:flex;
+        flex-direction: column;
+        gap:32px;
+        margin-bottom:64px;
+        
+        &--link {
+        color: $basic-text;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        transition-property: color;
+	    transition-duration: 250ms;
+	    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover, &:focus {
+            color:$logo-text;
+        }
+        }
+        
+    }
+}
+.mob-menu__social {
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    gap:10px;
+    font-size:18px;
+    font-weight: 500;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    margin-top:32px;
+    
+    
+    &--item:not(:last-child){
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        
+    }
+    &--item{
+        padding-right: 10px;
+    }
+
+    &--link {
+        cursor:pointer;
+        color:$logo-text;
+    }
+    // &--item:first-child{
+    //     padding-left:-10px;
+    // }   
+}

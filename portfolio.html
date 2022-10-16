@@ -10,7 +10,19 @@
 <body>
     <header class="header">
         <div class="container header__wrapper">
-            <a class="logo" href="#" >Web<span class="logo__text--header">Studio</span></a>
+            <a class="logo logo__header" href="#" >Web<span class="logo__text--header">Studio</span></a>
+            <div class="mob-menu">
+                <button class="mob-menu__button js-open-menu is-open"
+                type="button"
+                aria-label="Перемикач чобільного меню"
+                aria-controls="menu-container"
+                aria-expandet="false"
+                data-menu-button>
+                    <svg class="mob-menu__ico mob-menu__ico--open">
+                        <use class="mob-menu--open" href="./images/mob-menu.svg#menu_mob"></use>
+                    </svg>
+                </button>
+            </div>
             <nav class="nav">
                 <ul class="site-nav">
                     <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Студія</a></li>
@@ -23,7 +35,7 @@
                     <a class="contact__link  contact__link--active" href="mailto:info@devstudio.com"><svg class="contact__ico"><use href="./images/symbol-defs.svg#envelope"></use></svg> info@devstudio.com</a>
                 </li>
                 <li class="contact__item">
-                    <a class="contact__link contact__link--active" href="tel:+38 096 111 11 11"><svg class="contact__ico"><use href="./images/symbol-defs.svg#smartphone"></use></svg>+38 096 111 11 11</a>
+                    <a class="contact__link contact__link--active" href="tel:+380961111111"><svg class="contact__ico"><use href="./images/symbol-defs.svg#smartphone"></use></svg>+38 096 111 11 11</a>
                 </li>
             </ul>
         </div>
@@ -32,8 +44,8 @@
         <div class="container flex-contanie">
             <h1 class="section-title visibility-hidden">Портфоліо</h1>
             <ul class="portfolio__btn-list">
-                <li class="portfolio__btn-item"><button type="button" class="portfolio__btn button">Веб-сайти</button></li>
                 <li class="portfolio__btn-item"><button type="button" class="portfolio__btn button">Усі</button></li>
+                <li class="portfolio__btn-item"><button type="button" class="portfolio__btn button">Веб-сайти</button></li>
                 <li class="portfolio__btn-item"><button type="button" class="portfolio__btn button">Додатки</button></li>
                 <li class="portfolio__btn-item"><button type="button" class="portfolio__btn button">Дизайн</button></li>
                 <li class="portfolio__btn-item"><button type="button" class="portfolio__btn button">Маркетинг</button></li>
@@ -43,7 +55,27 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="project__wrap-details">
-                            <img src="./images/project/project1.jpg" alt="Веб сайт открыт на ноутбуке" width="370" />
+                            <!-- <img src="./images/project/project1.jpg" alt="Веб сайт открыт на ноутбуке" width="370" /> -->
+                            <picture class="project__img">
+                                <source
+                                srcset="
+                                ./images/desk/desk-p1.jpg 1x,
+                                ./images/desk/desk-p1@2x.jpg 2x"
+                                media="(min-width: 1200px)"
+                                />
+                                <source
+                                srcset="
+                                ./images/tab/tba-p1.jpg 1x,
+                                ./images/tab/tba-p1@2x.jpg 2x"
+                                media="(min-width: 768px)"
+                                />
+                                <source
+                                srcset="
+                                ./images/tel/tel-p1.jpg 1x,
+                                ./images/tel/tel-p1@2x.jpg 2x"
+                                media="(max-width: 767px)"
+                                />
+                                <img src="./images/tel/tel-p1.jpg" alt="Веб сайт открыт на ноутбуке"/>
                             <p class="project__details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                         </div>
                         <div class="project__desc">
@@ -55,11 +87,31 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="project__wrap-details">
-                        <img
+                        <!-- <img
                             src="./images/project/project2.jpg"
                             alt="Постер на котором изображены 2 баскетболиста в борьбе за мяч"
                             width="370"
-                            />
+                            /> -->
+                            <picture class="project__img">
+                                <source
+                                srcset="
+                                ./images/desk/desk-p2.jpg 1x,
+                                ./images/desk/desk-p2@2x.jpg 2x"
+                                media="(min-width: 1200px)"
+                                />
+                                <source
+                                srcset="
+                                ./images/tab/tba-p2.jpg 1x,
+                                ./images/tab/tba-p2@2x.jpg 2x"
+                                media="(min-width: 768px)"
+                                />
+                                <source
+                                srcset="
+                                ./images/tel/tel-p2.jpg 1x,
+                                ./images/tel/tel-p2@2x.jpg 2x"
+                                media="(max-width: 767px)"
+                                />
+                                <img src="./images/tel/tel-p2.jpg" alt="Веб сайт открыт на ноутбуке"/>
                         <p class="project__details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                         </div>	
                         <div class="project__desc">
@@ -71,7 +123,27 @@
                 <li class="project__item">
                     <a href="#" class="project__link">
                         <div class="project__wrap-details">
-                        <img src="./images/project/project3.jpg" alt="Изображение логотипа ресторана" width="370" />
+                        <!-- <img src="./images/project/project3.jpg" alt="Изображение логотипа ресторана" width="370" /> -->
+                        <picture class="project__img">
+                            <source
+                            srcset="
+                            ./images/desk/desk-p3.jpg 1x,
+                            ./images/desk/desk-p3@2x.jpg 2x"
+                            media="(min-width: 1200px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tab/tba-p3.jpg 1x,
+                            ./images/tab/tba-p3@2x.jpg 2x"
+                            media="(min-width: 768px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tel/tel-p3.jpg 1x,
+                            ./images/tel/tel-p3@2x.jpg 2x"
+                            media="(max-width: 767px)"
+                            />
+                            <img src="./images/tel/tel-p3.jpg" alt="Изображение логотипа ресторана"/>
                         <p class="project__details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                         </div>
                         <div class="project__desc">
@@ -83,7 +155,27 @@
                 <li class="project__item">
                     <a href="#" class="project__link">
                         <div class="project__wrap-details">
-                        <img src="./images/project/project4.jpg" alt="Изображение студийных наушников" width="370" />
+                        <!-- <img src="./images/project/project4.jpg" alt="Изображение студийных наушников" width="370" /> -->
+                        <picture class="project__img">
+                            <source
+                            srcset="
+                            ./images/desk/desk-p4.jpg 1x,
+                            ./images/desk/desk-p4@2x.jpg 2x"
+                            media="(min-width: 1200px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tab/tba-p4.jpg 1x,
+                            ./images/tab/tba-p4@2x.jpg 2x"
+                            media="(min-width: 768px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tel/tel-p4.jpg 1x,
+                            ./images/tel/tel-p4@2x.jpg 2x"
+                            media="(max-width: 767px)"
+                            />
+                            <img src="./images/tel/tel-p4.jpg" alt="Изображение студийных наушников"/>
                         <p class="project__details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                         </div>
                         <div class="project__desc">
@@ -95,7 +187,27 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="project__wrap-details">
-                        <img src="./images/project/project5.jpg" alt="На фото две коробки " width="370" />
+                        <!-- <img src="./images/project/project5.jpg" alt="На фото две коробки " width="370" /> -->
+                        <picture class="project__img">
+                            <source
+                            srcset="
+                            ./images/desk/desk-p5.jpg 1x,
+                            ./images/desk/desk-p5@2x.jpg 2x"
+                            media="(min-width: 1200px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tab/tba-p5.jpg 1x,
+                            ./images/tab/tba-p5@2x.jpg 2x"
+                            media="(min-width: 768px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tel/tel-p5.jpg 1x,
+                            ./images/tel/tel-p5@2x.jpg 2x"
+                            media="(max-width: 767px)"
+                            />
+                            <img src="./images/tel/tel-p5.jpg" alt="На фото две коробки"/>
                         <p class="project__details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                         </div>
                         <div class="project__desc">
@@ -107,7 +219,27 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="project__wrap-details">
-                        <img src="./images/project/project6.jpg" alt="Веб сайт открыт на экране компьютера" width="370" />
+                        <!-- <img src="./images/project/project6.jpg" alt="Веб сайт открыт на экране компьютера" width="370" /> -->
+                        <picture class="project__img">
+                            <source
+                            srcset="
+                            ./images/desk/desk-p6.jpg 1x,
+                            ./images/desk/desk-p6@2x.jpg 2x"
+                            media="(min-width: 1200px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tab/tba-p6.jpg 1x,
+                            ./images/tab/tba-p6@2x.jpg 2x"
+                            media="(min-width: 768px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tel/tel-p6.jpg 1x,
+                            ./images/tel/tel-p6@2x.jpg 2x"
+                            media="(max-width: 767px)"
+                            />
+                            <img src="./images/tel/tel-p6.jpg" alt="Веб сайт открыт на экране компьютера"/>
                         <p class="project__details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                         </div>
                         <div class="project__desc">
@@ -119,7 +251,27 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="project__wrap-details">
-                        <img src="./images/project/project7.jpg" alt="Разворот глянцевого журнала" width="370" />
+                        <!-- <img src="./images/project/project7.jpg" alt="Разворот глянцевого журнала" width="370" /> -->
+                        <picture class="project__img">
+                            <source
+                            srcset="
+                            ./images/desk/desk-p7.jpg 1x,
+                            ./images/desk/desk-p7@2x.jpg 2x"
+                            media="(min-width: 1200px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tab/tba-p7.jpg 1x,
+                            ./images/tab/tba-p7@2x.jpg 2x"
+                            media="(min-width: 768px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tel/tel-p7.jpg 1x,
+                            ./images/tel/tel-p7@2x.jpg 2x"
+                            media="(max-width: 767px)"
+                            />
+                            <img src="./images/tel/tel-p7.jpg" alt="Разворот глянцевого журнала"/>
                         <p class="project__details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                         </div>
                         <div class="project__desc">
@@ -131,7 +283,27 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="project__wrap-details">
-                        <img src="./images/project/project8.jpg" alt="Ярлык для одежды" width="370" />
+                        <!-- <img src="./images/project/project8.jpg" alt="Ярлык для одежды" width="370" /> -->
+                        <picture class="project__img">
+                            <source
+                            srcset="
+                            ./images/desk/desk-p8.jpg 1x,
+                            ./images/desk/desk-p8@2x.jpg 2x"
+                            media="(min-width: 1200px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tab/tba-p8.jpg 1x,
+                            ./images/tab/tba-p8@2x.jpg 2x"
+                            media="(min-width: 768px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tel/tel-p8.jpg 1x,
+                            ./images/tel/tel-p8@2x.jpg 2x"
+                            media="(max-width: 767px)"
+                            />
+                            <img src="./images/tel/tel-p8.jpg" alt="Ярлык для одежды"/>
                         <p class="project__details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                         </div>
                         <div class="project__desc">
@@ -143,7 +315,27 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="project__wrap-details">
-                        <img src="./images/project/project9.jpg" alt="Человек работает на ноутбуке в приложении" width="370" />
+                        <!-- <img src="./images/project/project9.jpg" alt="Человек работает на ноутбуке в приложении" width="370" /> -->
+                        <picture class="project__img">
+                            <source
+                            srcset="
+                            ./images/desk/desk-p9.jpg 1x,
+                            ./images/desk/desk-p9@2x.jpg 2x"
+                            media="(min-width: 1200px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tab/tba-p9.jpg 1x,
+                            ./images/tab/tba-p9@2x.jpg 2x"
+                            media="(min-width: 768px)"
+                            />
+                            <source
+                            srcset="
+                            ./images/tel/tel-p9.jpg 1x,
+                            ./images/tel/tel-p9@2x.jpg 2x"
+                            media="(max-width: 767px)"
+                            />
+                            <img src="./images/tel/tel-p9.jpg" alt="Человек работает на ноутбуке в приложении"/>
                         <p class="project__details">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                         </div>
                         <div class="project__desc">
@@ -160,7 +352,7 @@
     <footer class="footer">
         <div class="container footer__wrap">
             <div class="footer__address">
-                <a class="logo" href="#" >Web<span class="logo__text--footer">Studio</span></a>
+                <a class="logo logo__footer" href="#" >Web<span class="logo__text--footer">Studio</span></a>
                 <address class="address">
                     <ul class="address__list">
                         <li class="address__item">
@@ -172,12 +364,12 @@
                             <a class="contact__link contact__link--footer" href="mailto:info@devstudio.com" >info@devstudio.com</a>
                         </li>
                         <li class="address__item">
-                            <a class="contact__link contact__link--footer" href="tel:+38 096 111 11 11" >+38 096 111 11 11</a>
+                            <a class="contact__link contact__link--footer" href="tel:+380961111111" >+38 096 111 11 11</a>
                         </li>
                     </ul>
             </address>
             </div>
-            <div class="footer__socilal">
+            <div class="footer__social">
                 <p class="footer__subtitle">приєднуйтесь</p>
                 <ul class="social">
                     <li class="social__item">
@@ -212,7 +404,7 @@
             </div>
             <div class="subscription">
                     <p class="footer__subtitle">Підпишіться на розсилку</p>
-                    <form action="" class="subscription__form">
+                    <form action="#" class="subscription__form">
                         <input class="subscription__input" type="email" placeholder="E-mail">
                         <button class="button subscribe__btn" type="submit">Підписатися
                             <svg class="subscribe__btn-ico">
@@ -224,49 +416,43 @@
             
         </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
-		<div class="modal">
-			<button type="button" class="modal__close-btn" data-modal-close>
-				<svg class="modal__close-btn-img">
-					<use href="./images/symbol-defs.svg#close"></use>
-				</svg>
-			</button>
-			<p class="modal__titel">Залиште свої дані, ми вам передзвонимо</p>
-			<form action="#" class="modal__form">
-				<div class="modal__form-wrapper">
-					<label class="modal__form-field"><span class="modal__field-titel">Ім'я</span>
-						<input type="text" name="name" class="modal__field-input" required />
-						<svg class="modal__field-ico">
-							<use href="./images/symbol-defs.svg#person"></use>
-						</svg>
-					</label>
-					<label class="modal__form-field"><span class="modal__field-titel">Телефон</span>
-						<input type="tel" name="phone" class="modal__field-input" required />
-						<svg class="modal__field-ico">
-							<use href="./images/symbol-defs.svg#phone"></use>
-						</svg>
-					</label>
-					<label class="modal__form-field"><span class="modal__field-titel">Пошта</span>
-						<input type="email" name="mail" class="modal__field-input" />
-						<svg class="modal__field-ico">
-							<use href="./images/symbol-defs.svg#email"></use>
-						</svg>
-					</label>
-					<label class="modal__form-field"><span class="modal__field-titel">Коментар</span>
-						<textarea name="comment" rows="8" class="modal__field-input modal__field-comment" placeholder="Введіть текст"></textarea>
-					</label>
-				</div>
-				<label class="policy">
-					<input type="checkbox" name="policy" class="policy__checkbox" required />
-					<svg class="policy__check-ico">
-						<use href="./images/symbol-defs.svg#check"></use>
-					</svg>
-					Погоджуюся з розсилкою та приймаю <a href="" class="policy__link">Умови договору</a>
-				</label>
-				<button type="submit" class="button modal__btn">Відправити</button>
-            </form>
-		</div>
-	</div>
-	<script src="./js/modal.js"></script>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="mob-menu__button js-close-menu">
+          <svg class="mob-menu__ico mob-menu__ico--close">
+            <use class="mob-menu--close" href="./images/mob-menu.svg#close_mob"></use>
+          </svg>
+        </button>
+          <ul class="mob-menu">
+            <ul class="mob-menu__list">
+                <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link--active" href="index.html">Студія</a></li>
+                <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link--active" href="portfolio.html">Портфоліо</a></li>
+                <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link--active" href="#">Контакти</a></li>
+            </ul>
+            <ul class="mob-menu__contact">
+                <li class="mob-menu__contact--item">
+                    <a class="mob-menu__contact--link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+                <li class="mob-menu__contact--item">
+                    <a class="mob-menu__contact--link" href="tel:+380961111111">+38 096 111 11 11</a>
+                </li>
+            </ul>
+            <ul class="mob-menu__social">
+                <li class="mob-menu__social--item"><a href="#" class="mob-menu__social--link">Instagram</a></li>
+                <li class="mob-menu__social--item"><a href="#" class="mob-menu__social--link">Twitter</a></li>
+                <li class="mob-menu__social--item"><a href="#" class="mob-menu__social--link">Facebook</a></li>
+                <li class="mob-menu__social--item"><a href="#" class="mob-menu__social--link">LinkedIn</a></li>
+            </ul>
+        </ul>
+
+      </div>
+  	<script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
 </body>
 </html>`

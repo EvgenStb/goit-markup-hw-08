@@ -1,11 +1,20 @@
 .header {
         border-bottom: 1px solid $border-color;
         &__wrapper {
-        @media screen and (min-width:768px){
+            position:relative;
             display: flex;
+            align-items: center;
+            justify-content: space-between;
+        @media screen and (min-width:768px){
+            justify-content: space-between;
             align-items: center;
             }
         }
+}
+.mob-menu {
+    @media screen and (min-width:768px){
+        display:none;
+    }
 }
 
 @import '../components/site-nav';
@@ -16,13 +25,13 @@
     display:none;
     @media  screen and (min-width:768px) {
         display: block;
-        margin: 0 auto;
+        
     }
     @media screen and (min-width:1200px){
             display: flex;
             align-items: center;
-            margin-top:21px;
             gap: 30px;
+            margin-left:315px;
     }
     &__item {
         &:not(:last-child){
@@ -50,10 +59,16 @@
     }
     
     &__ico {
-        width:16px;
-        height:16px;
+        width:14px;
+        height:14px;
         fill:$ico-gray;
         margin-right: 10px;
+        
+        @media screen and (min-width:1200px){
+            width:16px;
+            height:16px;
+        }
+        
     }
 }
 .contact__link--active:focus>.contact__ico,
