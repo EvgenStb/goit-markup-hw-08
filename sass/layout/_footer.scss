@@ -7,12 +7,12 @@
         @media screen and (max-width:1199px){
             text-align: center;
         }
+        @media screen and (min-width:1200px) {
+        margin:0;
+        }
     }
     &__wrap {
-        
-        
-        // justify-content: space-around;
-        // align-items: center;
+     
         @media screen and (min-width:768px){
             display: flex;
             flex-wrap:wrap;
@@ -25,16 +25,21 @@
 
     }
     &__social {
-        padding-bottom:60px;
-        text-align: center;
+        @media screen and (max-width:1199px){
+            margin-bottom:60px;
+            text-align: center;  
+        }
+        
         @media screen and (min-width:768px){
             margin-left:165px;
+
         }
         @media screen and (min-width:1200px){
+            margin-bottom:0;
             margin-left:70px;
             text-align: left;
         }
-        // margin-left:70px;
+      
     }
 
     &__subtitle {

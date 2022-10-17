@@ -13,7 +13,7 @@
 .menu-container.is-open {
     transform: translateX(0);
  }
-.mob-menu {
+.mob-menu{
     &__button {
         display:flex;
         align-items: center;
@@ -46,12 +46,19 @@
 
        
     }
+}
+.menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
     &__list {
         display:flex;
         flex-direction: column;
-        row-gap:32px;
-        margin-bottom:302px;
-        
+        justify-content: space-between;
+        row-gap:32px;        
     }
     &__link {
     color:$second-text;
@@ -90,8 +97,9 @@
         
     }
 }
-.mob-menu__social {
+.menu__social {
     display:flex;
+    flex-wrap: wrap;
     justify-content: start;
     align-items: center;
     gap:10px;

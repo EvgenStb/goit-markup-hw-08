@@ -1,8 +1,5 @@
 .portfolio {
-        margin-top: 45px;
-        @media screen and (min-width:1200px){
-            margin-top:96px;
-        }
+        
 
     &__btn-list {
         display: flex;
@@ -10,10 +7,9 @@
         justify-content:start;
         column-gap: 8px;
         row-gap:15px;
-        margin-bottom:40px;
         @media screen and (min-width:768px){
           justify-content: center;  
-          margin-bottom:30px;
+        //   margin-bottom:30px;
         }
         @media screen and (min-width:1200px){
             margin-bottom:50px;
@@ -45,8 +41,7 @@
 
 // Project card
 .project {
-    margin-bottom:94px;
-
+    
     &__list {
         display: flex;
         flex-wrap: wrap;
@@ -68,6 +63,8 @@
     &__link {
         width: 100%;
         height: 100%;
+        border-bottom: 1px solid $border-color;
+        border-right: 1px solid $border-color;
         transition-property: box-shadow;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -110,8 +107,7 @@
 
     &__desc {
         padding: 20px 24px;
-        border-bottom: 1px solid $border-color;
-        border-right: 1px solid $border-color;
+        
     }
    
     &__subtitle {

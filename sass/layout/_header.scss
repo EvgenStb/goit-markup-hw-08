@@ -11,7 +11,7 @@
             }
         }
 }
-.mob-menu {
+.menu-container {
     @media screen and (min-width:768px){
         display:none;
     }
@@ -61,7 +61,7 @@
     &__ico {
         width:14px;
         height:14px;
-        fill:$ico-gray;
+        fill:currentColor;
         margin-right: 10px;
         
         @media screen and (min-width:1200px){

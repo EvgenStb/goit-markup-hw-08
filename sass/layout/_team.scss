@@ -1,15 +1,10 @@
 .team {
     margin: 0 auto;
-	padding-top: 60px;
-	padding-bottom: 30px;
 	font-size: 16px;
 	line-height: 1.19;
 	background-color: $bgc-grey;
 	text-align: center;
-    @media screen and (min-width:1200px){
-        padding-top: 94px;
-	    padding-bottom: 94px;
-    }
+   
 
     &__list {
         @media screen and (min-width:768px){
